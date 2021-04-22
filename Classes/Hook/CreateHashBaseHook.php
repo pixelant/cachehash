@@ -22,7 +22,7 @@ class CreateHashBaseHook
         /** @var ContentObjectRenderer $renderer */
         $renderer = GeneralUtility::makeInstance(ContentObjectRenderer::class);
 
-        $renderer->start($params);
+        $renderer->start($params['hashParameters']);
 
         foreach ($frontendController->config['config']['tx_cachehash.']['parameters.'] as $key => $value) {
             $nodotKey = rtrim($key,'.');
