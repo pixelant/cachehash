@@ -24,7 +24,7 @@ class CreateHashBaseHook
 
         $renderer->start($params['hashParameters']);
 
-        foreach ($frontendController->config['config']['tx_cachehash.']['parameters.'] as $key => $value) {
+        foreach ($frontendController->config['config']['tx_cachehash.']['parameters.'] ?? [] as $key => $value) {
             $nodotKey = rtrim($key,'.');
 
             // If value is static and there is no stdWrap processing array.
